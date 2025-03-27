@@ -24,4 +24,4 @@ Pantalla Principal![imagen principal](https://github.com/user-attachments/assets
 )
 
 ## Enlace al Proyecto:
-[Enlace a la Demo](https://usuario.github.io/galeria-imagenes-dinamica)
+[Enlace a la Demo](https://galeria-de-imagenes-frankk.vercel.app/)
