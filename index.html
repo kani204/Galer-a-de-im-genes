@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Dinámica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="gallery-wrapper">
+        <div class="gallery-container">
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/image1.webp" alt="Paisaje Montañoso" class="gallery-image" 
+                         data-title="Paisaje Montañoso" 
+                         data-description="Majestuosas montañas">
+                    <div class="image-details">
+                        <h2>Paisaje Montañoso</h2>
+                        <p>Majestuosas montañas</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/image2.webp" alt="Playa Tropical" class="gallery-image"
+                         data-title="Playa Tropical" 
+                         data-description="Aguas cristalinas y arena blanca">
+                    <div class="image-details">
+                        <h2>Playa Tropical</h2>
+                        <p>Aguas cristalinas y arena blanca</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/image3.webp" alt="Ciudad Nocturna" class="gallery-image"
+                         data-title="Ciudad Nocturna" 
+                         data-description="Luces urbanas brillando en la oscuridad">
+                    <div class="image-details">
+                        <h2>Ciudad Nocturna</h2>
+                        <p>Luces urbanas brillando en la oscuridad</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/image4.webp" alt="Bosque Otoñal" class="gallery-image"
+                         data-title="Bosque Otoñal" 
+                         data-description="Árboles con hojas doradas y rojas">
+                    <div class="image-details">
+                        <h2>Bosque Otoñal</h2>
+                        <p>Árboles con hojas doradas y rojas</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/image5.webp" alt="Campos de Lavanda" class="gallery-image"
+                         data-title="Campos de Lavanda" 
+                         data-description="Extensos campos de lavanda en flor">
+                    <div class="image-details">
+                        <h2>Campos de Lavanda</h2>
+                        <p>Extensos campos de lavanda en flor</p>
+                    </div>
+                </div>
+            </div>
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+        </div>
+
+        <div class="sidebar">
+            <div class="music-player">
+                <div class="music-info">
+                    <h3 id="songTitle">Música de Fondo</h3>
+                    <div class="music-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="music-controls">
+                    <div class="music-buttons">
+                        <button class="music-button" id="prevTrack">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 19V5l-7 7h18"/>
+                            </svg>
+                        </button>
+                        <button class="music-button" id="playPauseMusic">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 4l12 8-12 8z"/>
+                            </svg>
+                        </button>
+                        <button class="music-button" id="nextTrack">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 5v14l7-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="extras-section">
+                
+                <div class="modo-toggle">
+                    <button id="darkModeToggle">Cambiar Modo</button>
+                </div>
+                
+                <div class="citas-inspiradoras">
+                    <h3>Citas</h3>
+                    <blockquote id="cita-texto">
+                        "La creatividad es inteligencia divirtiéndose."
+                    </blockquote>
+                    <cite id="cita-autor">- Albert Einstein</cite>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imagenModal" class="modal">
+        <span class="cerrar-modal">&times;</span>
+        <img class="modal-contenido" id="imagen-modal-contenido">
+        <div id="modal-descripcion">
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-texto"></p>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic">
+        <source src="assets/audio/Track1.mp3" type="audio/mpeg">
+        <source src="assets/audio/Track2.mp3" type="audio/mpeg">
+        <source src="assets/audio/Track3.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
